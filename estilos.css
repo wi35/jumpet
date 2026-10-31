@@ -1,0 +1,55 @@
+:root{--bg:#f6f7f9;--card:#fff;--ink:#16202c;--mute:#5a6574;--line:#dfe3e9;--acc:#1f3a5f;--acc2:#2f6fd6;--soft:#eaf0f8;--btnink:#fff}
+@media (prefers-color-scheme:dark){:root{--bg:#0e1319;--card:#161e28;--ink:#e6ebf2;--mute:#9aa5b4;--line:#283240;--acc:#a8c4f2;--acc2:#7fa8f0;--soft:#1c2633;--btnink:#0e1319}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.6 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+a{color:var(--acc2)}
+.envoltura{max-width:1080px;margin:0 auto;padding:0 20px}
+.texto{max-width:740px;margin:0 auto;padding:0 20px}
+header.barra{background:var(--card);border-bottom:1px solid var(--line)}
+header.barra .envoltura{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:64px}
+.marca{display:flex;align-items:center;gap:10px;color:var(--acc);font-weight:800;font-size:22px;text-decoration:none;letter-spacing:-.4px}
+.marca img{width:32px;height:32px}
+.barra nav{display:flex;gap:18px;align-items:center;font-size:15px}
+.barra nav a{color:var(--mute);text-decoration:none}
+.barra nav a:hover{color:var(--ink)}
+.boton{display:inline-block;padding:12px 22px;border-radius:10px;background:var(--acc);color:var(--btnink);font-weight:700;text-decoration:none;border:1px solid var(--acc)}
+.boton:hover{filter:brightness(1.1)}
+.boton.sec{background:none;color:var(--acc)}
+.barra .boton{padding:8px 16px;font-size:15px;color:var(--btnink)}
+.portada{padding:72px 0 56px;text-align:center}
+.portada h1{font-size:clamp(34px,6vw,56px);line-height:1.08;margin:0 0 18px;letter-spacing:-1.2px}
+.portada h1 em{font-style:normal;color:var(--acc2)}
+.portada p.sub{font-size:clamp(18px,2.4vw,21px);color:var(--mute);max-width:640px;margin:0 auto 28px}
+.portada .botones{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+.portada small{display:block;margin-top:14px;color:var(--mute);font-size:14px}
+section.bloque{padding:56px 0;border-top:1px solid var(--line)}
+section.bloque h2{font-size:clamp(26px,3.6vw,34px);margin:0 0 10px;letter-spacing:-.6px}
+section.bloque p.intro{color:var(--mute);margin:0 0 28px;max-width:680px}
+.rejilla{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:16px}
+.tarjeta{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:22px}
+.tarjeta h3{margin:0 0 6px;font-size:19px}
+.tarjeta p{margin:0;color:var(--mute);font-size:16px}
+.tarjeta .num{display:inline-grid;place-items:center;width:32px;height:32px;border-radius:50%;background:var(--soft);color:var(--acc);font-weight:800;margin-bottom:10px}
+.dos{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.tarjeta ul{margin:10px 0 0;padding-left:20px;color:var(--mute);font-size:16px}
+details{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px 18px;margin-bottom:10px}
+summary{font-weight:700;cursor:pointer}
+details p{color:var(--mute);margin:10px 0 0}
+.llamada{text-align:center;background:var(--soft);border-radius:18px;padding:44px 20px;margin:56px 0}
+.llamada h2{margin:0 0 16px}
+footer{border-top:1px solid var(--line);padding:28px 0 40px;color:var(--mute);font-size:14px}
+footer .envoltura{display:flex;flex-wrap:wrap;gap:10px 22px;justify-content:space-between}
+footer nav{display:flex;flex-wrap:wrap;gap:8px 18px}
+footer a{color:var(--mute)}
+article{padding:44px 0 24px}
+article h1{font-size:clamp(30px,5vw,42px);line-height:1.15;letter-spacing:-.8px;margin:0 0 8px}
+article .fecha{color:var(--mute);font-size:14px;margin:0 0 28px}
+article h2{font-size:24px;margin:34px 0 8px;letter-spacing:-.3px}
+article h3{font-size:19px;margin:24px 0 6px}
+article li{margin-bottom:6px}
+article blockquote{margin:16px 0;padding:12px 18px;border-left:4px solid var(--acc2);background:var(--card);border-radius:0 10px 10px 0}
+article pre{white-space:pre-wrap;background:var(--card);border:1px solid var(--line);border-radius:10px;padding:14px 16px;font:15px/1.55 ui-monospace,Consolas,monospace}
+article table{border-collapse:collapse;width:100%;font-size:16px;margin:12px 0}
+article th,article td{border:1px solid var(--line);padding:8px 10px;text-align:left;vertical-align:top}
+.cta-articulo{margin:36px 0;padding:22px;border:1px solid var(--line);border-radius:14px;background:var(--card)}
+@media (max-width:720px){.dos{grid-template-columns:1fr}.barra nav a.ocultable{display:none}.portada{padding:48px 0 40px}}
