@@ -1,4 +1,5 @@
 User-agent: *
 Allow: /
 Disallow: /app.html
+Disallow: /lugar-listo.html
 Sitemap: https://jumpet.app/sitemap.xml
