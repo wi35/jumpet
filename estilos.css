@@ -69,7 +69,7 @@ section.bloque p.intro{color:var(--mute);margin:0 0 28px;max-width:700px}
 .regla{margin-top:18px;color:var(--mute);font-size:14px}
 
 /* Ofertas reales */
-.busca{display:grid;grid-template-columns:2fr 1.4fr 1.1fr auto;gap:10px;align-items:end;margin-bottom:10px}
+.busca{display:grid;grid-template-columns:2fr 1.5fr auto;gap:10px;align-items:end;margin-bottom:10px}
 .busca label{font-size:13px;font-weight:600;color:var(--mute)}
 .busca input,.busca select,dialog input{display:block;width:100%;margin-top:5px;padding:11px 12px;border:1px solid var(--line);border-radius:10px;background:var(--card);color:var(--ink);font:inherit;font-size:16px}
 .busca input:focus,.busca select:focus,dialog input:focus{outline:none;border-color:var(--acc2);box-shadow:0 0 0 3px color-mix(in srgb,var(--acc2) 22%,transparent)}

@@ -86,7 +86,7 @@ $('#formCompra').addEventListener('submit', e => {
 
 // ---- Ofertas reales ----
 function buscar() {
-  const p = new URLSearchParams({ q: $('#q').value.trim() || 'bilingual', donde: $('#donde').value.trim(), pais: $('#pais').value, remoto: $('#remoto').checked ? 1 : '' });
+  const p = new URLSearchParams({ q: $('#q').value.trim() || 'bilingual', donde: $('#donde').value.trim(), remoto: $('#remoto').checked ? 1 : '' });
   $('#listaOfertas').innerHTML = '<div class="fantasma"></div>'.repeat(6);
   $('#fuente').textContent = '';
   pedir('/api/empleos?' + p).then(r => {
