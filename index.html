@@ -3,11 +3,15 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light">
 <title>Jumpet · Ofertas reales y tu currículum, cada día</title>
 <meta name="description" content="Ofertas de empleo reales en Estados Unidos, un currículum profesional con ayuda de IA y hasta 5 envíos al día desde tu propio Gmail. Gratis.">
 <link rel="canonical" href="https://jumpet.app/">
 <link rel="icon" href="logo.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://api.jumpet.app">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap">
 <link rel="stylesheet" href="estilos.css">
 <meta property="og:title" content="Jumpet · Ofertas reales y tu currículum, cada día">
 <meta property="og:description" content="Ofertas de empleo reales y tu currículum profesional enviado desde tu Gmail. Gratis.">
@@ -16,9 +20,10 @@
 </head>
 <body>
 <header class="barra"><div class="envoltura">
-  <a class="marca" href="./"><img src="logo.svg" alt="" width="32" height="32">Jumpet</a>
+  <a class="marca" href="./"><img src="logo.svg" alt="" width="34" height="34">Jumpet</a>
   <nav>
     <a class="ocultable" href="#ofertas">Ofertas</a>
+    <a class="ocultable" href="#destacados">Empresas</a>
     <a class="ocultable" href="#como">Cómo funciona</a>
     <a class="ocultable" href="guias.html">Guías</a>
     <a class="boton" href="app.html">Entrar</a>
@@ -27,37 +32,34 @@
 
 <main>
 <section class="portada"><div class="envoltura">
-  <div>
-    <span class="etiqueta">Búsqueda de empleo en Estados Unidos</span>
-    <h1>Ofertas reales.<br><em>Un currículum que se toma en serio.</em></h1>
-    <p class="sub">Encuentra ofertas de empleo de verdad, crea tu currículum profesional en minutos y envíalo desde tu propio Gmail a 5 empresas bien elegidas cada día. Jumpet lo hace solo, aunque tengas la computadora apagada.</p>
-    <div class="botones">
-      <a class="boton" href="app.html">Entrar con Google</a>
-      <a class="boton sec" href="#ofertas">Ver ofertas</a>
-    </div>
-    <small>Gratis · Disponible en Estados Unidos · Solo necesitas una cuenta de Google</small>
-  </div>
-  <div class="encuadre" aria-hidden="true"><div class="dentro">
-    <div class="hoja">
-      <b>María Fernanda López</b><i>Contadora Pública Bilingüe · Miami, FL</i>
-      <div class="raya">PERFIL PROFESIONAL</div><div class="linea"></div><div class="linea" style="width:88%"></div><div class="linea" style="width:70%"></div>
-      <div class="raya">EXPERIENCIA PROFESIONAL</div><div class="linea" style="width:94%"></div><div class="linea" style="width:80%"></div><div class="linea" style="width:62%"></div>
-      <div class="raya">HABILIDADES</div><div class="linea" style="width:76%"></div>
-    </div>
-    <div class="envios" id="envios"><span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><em style="font-style:normal">enviados hoy</em></div>
-  </div></div>
+  <span class="etiqueta"><i></i>Ofertas nuevas cada hora · Estados Unidos</span>
+  <h1>Encuentra trabajo.<br><em>Postúlate en serio.</em></h1>
+  <p class="sub">Ofertas de empleo reales, un currículum profesional en minutos y 5 envíos al día desde tu propio Gmail. Jumpet lo hace solo, aunque tengas la computadora apagada.</p>
+  <form class="buscador" id="formPortada">
+    <label><span>🔍</span><input id="pq" placeholder="Puesto: cajera, enfermería, ventas…" aria-label="Puesto o especialidad"></label>
+    <label><span>📍</span><input id="pdonde" placeholder="Ciudad: Miami, FL" aria-label="Ciudad o estado"></label>
+    <button class="boton">Buscar ofertas</button>
+  </form>
+  <small>Gratis · Solo necesitas una cuenta de Google · <a href="app.html">Entrar con Google</a></small>
+  <div class="cifras"><div><b>5</b>envíos al día</div><div><b>100 %</b>gratis</div><div><b>Reales</b>ofertas de bolsas de empleo</div></div>
 </div></section>
 
 <section class="bloque" id="destacados"><div class="envoltura aparece">
-  <h2>Empresas destacadas</h2>
-  <p class="intro">Cinco lugares a la vista de todas las personas que buscan empleo en Jumpet. Pon el logo o la foto de tu empresa con un enlace a tu web.</p>
+  <div class="cabeza"><div>
+    <span class="antetitulo">Empresas destacadas</span>
+    <h2>Tu empresa, aquí arriba.</h2>
+    <p class="intro">Cinco lugares a la vista de todas las personas que buscan empleo en Jumpet. Pon el logo o la foto de tu empresa con un enlace a tu web.</p>
+  </div></div>
   <div class="lugares" id="lugares"></div>
   <p class="regla">Cada lugar es de quien lo pagó hasta que otra empresa paga el precio siguiente. Todos empiezan en 5 USD; cada vez que alguien retoma un lugar, sube 5 USD, y el nº 1 sube 10 USD. Pago único con Stripe. <a href="terminos.html#lugares">Normas de los lugares</a>.</p>
 </div></section>
 
-<section class="bloque" id="ofertas"><div class="envoltura aparece">
-  <h2>Ofertas de empleo reales en Estados Unidos</h2>
-  <p class="intro">Directamente de bolsas de empleo, actualizadas cada hora. Busca la tuya por puesto y ciudad, y postúlate con un currículum profesional.</p>
+<section class="bloque gris" id="ofertas"><div class="envoltura aparece">
+  <div class="cabeza"><div>
+    <span class="antetitulo">Ofertas de empleo</span>
+    <h2>Ofertas reales en Estados Unidos.</h2>
+    <p class="intro">Directamente de bolsas de empleo, actualizadas cada hora. Busca la tuya y postúlate con un currículum profesional.</p>
+  </div></div>
   <form class="busca" id="formOfertas">
     <label>Puesto o especialidad<input id="q" placeholder="Ej.: cajera, enfermería, bilingüe"></label>
     <label>Ciudad o estado<input id="donde" placeholder="Ej.: Miami, FL"></label>
@@ -69,19 +71,39 @@
 </div></section>
 
 <section class="bloque" id="como"><div class="envoltura aparece">
-  <h2>Cómo funciona</h2>
-  <p class="intro">Cuatro pasos. Tú decides cada dato que se envía y a quién.</p>
+  <div class="cabeza"><div>
+    <span class="antetitulo">Cómo funciona</span>
+    <h2>Cuatro pasos. Tú decides todo.</h2>
+  </div></div>
   <div class="rejilla">
-    <div class="tarjeta"><span class="num">1</span><h3>Crea tu currículum</h3><p>Rellena tus datos reales o cuéntale tu experiencia a la IA con tus palabras: la ordena y la redacta sin inventar nada. Ves la hoja final mientras escribes.</p></div>
-    <div class="tarjeta"><span class="num">2</span><h3>Elige ofertas reales</h3><p>Busca por puesto y ciudad. Si la oferta da un correo, la añades a tu lista con un clic; si no, te lleva a su web para postularte.</p></div>
-    <div class="tarjeta"><span class="num">3</span><h3>Arma tu lista</h3><p>Añade los correos de las empresas, o pega el texto de un anuncio y Jumpet saca los correos solo. Nunca repite una empresa.</p></div>
-    <div class="tarjeta"><span class="num">4</span><h3>5 envíos al día</h3><p>Cada día, a la hora que elijas, tu currículum en PDF sale desde tu Gmail con una carta personalizada para cada empresa. Pocos y bien hechos, para no acabar en spam.</p></div>
+    <div class="tarjeta"><span class="num">1</span><h3>Crea tu currículum</h3><p>Rellena tus datos reales o cuéntale tu experiencia a la IA: la ordena y la redacta sin inventar nada.</p></div>
+    <div class="tarjeta"><span class="num">2</span><h3>Elige ofertas reales</h3><p>Busca por puesto y ciudad. Si la oferta da un correo, la añades a tu lista con un clic.</p></div>
+    <div class="tarjeta"><span class="num">3</span><h3>Arma tu lista</h3><p>Añade correos de empresas o pega un anuncio y Jumpet saca los correos solo. Nunca repite.</p></div>
+    <div class="tarjeta"><span class="num">4</span><h3>5 envíos al día</h3><p>Cada día, a tu hora, tu currículum en PDF sale desde tu Gmail con una carta para cada empresa.</p></div>
+  </div>
+  <div class="muestra">
+    <div>
+      <h2>Un currículum que se toma en serio.</h2>
+      <p class="intro" style="margin-bottom:20px">Diseño limpio y profesional, en español o en inglés, listo para los filtros automáticos de las empresas. Lo ves terminado mientras lo escribes.</p>
+      <a class="boton" href="app.html">Crear mi currículum gratis</a>
+    </div>
+    <div class="encuadre" aria-hidden="true"><div class="dentro">
+      <div class="hoja">
+        <b>María Fernanda López</b><i>Contadora Pública Bilingüe · Miami, FL</i>
+        <div class="raya">PERFIL PROFESIONAL</div><div class="linea"></div><div class="linea" style="width:88%"></div><div class="linea" style="width:70%"></div>
+        <div class="raya">EXPERIENCIA PROFESIONAL</div><div class="linea" style="width:94%"></div><div class="linea" style="width:80%"></div><div class="linea" style="width:62%"></div>
+        <div class="raya">HABILIDADES</div><div class="linea" style="width:76%"></div>
+      </div>
+      <div class="envios" id="envios"><span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><em style="font-style:normal">enviados hoy</em></div>
+    </div></div>
   </div>
 </div></section>
 
-<section class="bloque"><div class="envoltura aparece">
-  <h2>Lo que Jumpet no hace</h2>
-  <p class="intro">Para que sepas exactamente qué esperar.</p>
+<section class="bloque gris"><div class="envoltura aparece">
+  <div class="cabeza"><div>
+    <span class="antetitulo">Sin trucos</span>
+    <h2>Lo que Jumpet no hace.</h2>
+  </div></div>
   <div class="rejilla">
     <div class="tarjeta"><h3>No inventa</h3><p>La IA solo ordena y redacta lo que tú escribes. Ni títulos, ni fechas, ni empresas que no existan.</p></div>
     <div class="tarjeta"><h3>No escribe a quien no elijas</h3><p>Solo envía a los correos que tú añades a tu lista, y nunca más de 5 al día.</p></div>
@@ -91,7 +113,8 @@
 </div></section>
 
 <section class="bloque"><div class="texto aparece">
-  <h2>Preguntas frecuentes</h2>
+  <span class="antetitulo">Preguntas frecuentes</span>
+  <h2 style="margin-bottom:24px">Lo que más nos preguntan.</h2>
   <details><summary>¿Cuánto cuesta?</summary><p>Nada. Jumpet es gratis para quien busca empleo. Se mantiene con los lugares destacados que pagan las empresas.</p></details>
   <details><summary>¿De dónde salen las ofertas?</summary><p>De bolsas de empleo públicas, a las que Jumpet se conecta. Cada oferta lleva a su anuncio original.</p></details>
   <details><summary>¿Desde qué correo salen los currículums?</summary><p>Desde tu propio Gmail, el de la cuenta con la que entras. Las respuestas de las empresas te llegan a ti directamente.</p></details>

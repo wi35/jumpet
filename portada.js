@@ -100,6 +100,14 @@ function buscar() {
   }).catch(() => { $('#listaOfertas').innerHTML = '<p class="fuente">Las ofertas se están conectando. Vuelve en un rato.</p>'; });
 }
 $('#formOfertas').addEventListener('submit', e => { e.preventDefault(); buscar(); });
+// El buscador grande de arriba rellena el de las ofertas y baja hasta ellas.
+$('#formPortada').addEventListener('submit', e => {
+  e.preventDefault();
+  $('#q').value = $('#pq').value;
+  $('#donde').value = $('#pdonde').value;
+  buscar();
+  $('#ofertas').scrollIntoView();
+});
 $('#remoto').addEventListener('change', buscar);
 
 cargarLugares();
